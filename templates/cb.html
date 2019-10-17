@@ -1,14 +1,37 @@
 <html>
-   <body>
-      <form action = "{{ url_for('addrec') }}" method = "POST">
-         <h3>Chatbot</h3>
-         Your Message<br>
-		 
-         <input type = "text" name = "msg" /><br>
-         <input type = "submit" value = "submit" /><br>
-      </form>
-      Response : {{ res}}
-   </body>
-   
+<head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+     <link rel = "stylesheet"  href = "/static/css/style.css" />
+</head>
+  <title>Candice</title>
+  <body>
+    <center>
+      <h1>
+        Your Personal ChatBot
+      </h1>
+    </center>
+<div class="box"></div>
+    <div class="boxed">
+      <div>
+        <div id="chatbox">
+         
+          <p class="botText">
+            Hi! I'm  your personal ChatBot with RSA encryption
+          </p>
+        </div>
+        <div id="userInput">
+          <form action = "{{ url_for('addrec') }}" method = "POST">
+             <h3>Chatbot</h3>
+             Your Message<br>
+          
+             <input type = "text" name = "msg" /><br>
+             <input type = "submit" value = "submit" /><br>
+          </form>
+          Response : {{ res}}
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
