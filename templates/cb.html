@@ -4,6 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
      <link rel = "stylesheet"  href = "/static/css/style.css" />
+     
 </head>
   <title>Candice</title>
   <body>
@@ -22,14 +23,19 @@
           </p>
         </div>
         <div id="userInput">
-          <form action = "{{ url_for('addrec') }}" method = "POST">
-             <h3>Chatbot</h3>
-             Your Message<br>
           
-             <input type = "text" name = "msg" /><br>
-             <input type = "submit" value = "submit" /><br>
-          </form>
-          Response : {{ res}}
+             <p id="aa"></p>
+             
+                <h3>Chatbot</h3>
+                Your Message
+          
+                
+                <form action = "{{ url_for('addrec') }}" method = "POST">
+                   <input type = "text" name = "msg11" id="msg11"/>
+                <input type = "submit" value = "submit" /><br>
+             </form>
+             Response : {{ res}}
+          
         </div>
       </div>
     </div>

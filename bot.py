@@ -73,5 +73,23 @@ def solve(user_response):
     else:
         flag=False
         return("Admin: Bye! take care..")
+        
+def decrypt(nm):
+    E = int(nm)
+    #decrypt
+    d = 13
+    n = 143
+    
 
+    C = pow(E,d,n)
+    C = E
+    input = ""
+    while(C>0):
+        rem = C%100
+        c = chr(rem)
+        input+= c
+        C = C//100
+    
+    input = input[::-1]
+    return input
 
